@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRC Application", "CRC Application\CRC Application.csproj", "{6347E57E-ECF5-44B9-9664-5A55A10FABBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6347E57E-ECF5-44B9-9664-5A55A10FABBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6347E57E-ECF5-44B9-9664-5A55A10FABBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6347E57E-ECF5-44B9-9664-5A55A10FABBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6347E57E-ECF5-44B9-9664-5A55A10FABBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55BC75F9-2B1C-4A94-B144-FD9A440DCAE1}
+	EndGlobalSection
+EndGlobal
