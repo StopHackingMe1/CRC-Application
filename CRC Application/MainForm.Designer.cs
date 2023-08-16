@@ -202,14 +202,14 @@
                // helpToolStripMenuItem
                // 
                helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-               helpToolStripMenuItem.Size = new Size(224, 26);
+               helpToolStripMenuItem.Size = new Size(186, 26);
                helpToolStripMenuItem.Text = "Help";
                helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
                // 
                // saveToolStripMenuItem
                // 
                saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-               saveToolStripMenuItem.Size = new Size(224, 26);
+               saveToolStripMenuItem.Size = new Size(186, 26);
                saveToolStripMenuItem.Text = "Save All Cards";
                saveToolStripMenuItem.Click += saveAllToolStripMenuItem_Click;
                // 
@@ -235,6 +235,7 @@
                Controls.Add(menuStrip1);
                MainMenuStrip = menuStrip1;
                Name = "CrcFormLabel";
+               StartPosition = FormStartPosition.CenterScreen;
                Text = "CRC Card Application";
                Load += Form1_Load;
                ((System.ComponentModel.ISupportInitialize)dataGridViewCards).EndInit();

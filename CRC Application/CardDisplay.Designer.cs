@@ -161,6 +161,7 @@
                Controls.Add(classNameLabel);
                Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
                Name = "CardDisplay";
+               StartPosition = FormStartPosition.CenterScreen;
                Text = "Card Display";
                Load += Form2_Load;
                ResumeLayout(false);

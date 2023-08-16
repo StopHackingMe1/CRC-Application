@@ -66,7 +66,7 @@ namespace CRC_Application
                else
                {
                     //Prints message box to the screen for the user to fill the class name field
-                    MessageBox.Show("Class name cannot be empty", "Empty Class Field"); 
+                    MessageBox.Show("Class name cannot be empty", "Empty Class Field");
                }
 
 
@@ -99,10 +99,8 @@ namespace CRC_Application
           //This is the implementation of the help menu for the application, discussing how to use the software
           private void helpToolStripMenuItem_Click(object sender, EventArgs e)
           {
-               this.Hide(); //Hides the main form
                HelpWindow userHelp = new HelpWindow();
                userHelp.Show();
-
           }
 
           //This function is responsible for deleting cards. If there arent any cards to delete, it lets the user know in a messagebox

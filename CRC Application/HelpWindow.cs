@@ -17,9 +17,6 @@ namespace CRC_Application
                InitializeComponent();
           }
 
-          private void HelpWindow_FormClosing(object sender, FormClosingEventArgs e)
-          {
-               Application.Exit(); //Terminates the application after pressing the exit button
-          }
+     
      }
 }

@@ -106,8 +106,8 @@
                Controls.Add(label2);
                Controls.Add(label1);
                Name = "HelpWindow";
+               StartPosition = FormStartPosition.CenterScreen;
                Text = "HelpWindow";
-               FormClosing += HelpWindow_FormClosing;
                ResumeLayout(false);
                PerformLayout();
           }
