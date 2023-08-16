@@ -1,6 +1,6 @@
 ﻿namespace CRC_Application
 {
-     partial class Form2
+     partial class CardDisplay
      {
           /// <summary>
           /// Required designer variable.

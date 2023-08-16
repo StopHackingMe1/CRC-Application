@@ -28,33 +28,37 @@
           /// </summary>
           private void InitializeComponent()
           {
-               classTextBoxLabel = new TextBox();
+               classTextBox = new TextBox();
                classNameLabel = new Label();
                label1 = new Label();
                label2 = new Label();
                label3 = new Label();
-               responseTextBoxLabel = new TextBox();
-               collabTextBoxLabel = new TextBox();
-               descriptionTextBoxLabel = new TextBox();
-               newCardButton = new Button();
+               responseTextBox = new TextBox();
+               collabTextBox = new TextBox();
+               descriptionTextBox = new TextBox();
+               clearFormButton = new Button();
                saveCardButton = new Button();
                loadCardButton = new Button();
                deleteCardButton = new Button();
                dataGridViewCards = new DataGridView();
+               menuStrip1 = new MenuStrip();
+               userToolStripMenuItem = new ToolStripMenuItem();
+               helpToolStripMenuItem = new ToolStripMenuItem();
                ((System.ComponentModel.ISupportInitialize)dataGridViewCards).BeginInit();
+               menuStrip1.SuspendLayout();
                SuspendLayout();
                // 
-               // classTextBoxLabel
+               // classTextBox
                // 
-               classTextBoxLabel.Location = new Point(117, 12);
-               classTextBoxLabel.Name = "classTextBoxLabel";
-               classTextBoxLabel.Size = new Size(305, 27);
-               classTextBoxLabel.TabIndex = 0;
+               classTextBox.Location = new Point(130, 83);
+               classTextBox.Name = "classTextBox";
+               classTextBox.Size = new Size(305, 27);
+               classTextBox.TabIndex = 0;
                // 
                // classNameLabel
                // 
                classNameLabel.AutoSize = true;
-               classNameLabel.Location = new Point(25, 15);
+               classNameLabel.Location = new Point(24, 86);
                classNameLabel.Name = "classNameLabel";
                classNameLabel.Size = new Size(86, 20);
                classNameLabel.TabIndex = 1;
@@ -63,7 +67,7 @@
                // label1
                // 
                label1.AutoSize = true;
-               label1.Location = new Point(25, 86);
+               label1.Location = new Point(25, 150);
                label1.Name = "label1";
                label1.Size = new Size(85, 20);
                label1.TabIndex = 2;
@@ -72,7 +76,7 @@
                // label2
                // 
                label2.AutoSize = true;
-               label2.Location = new Point(5, 178);
+               label2.Location = new Point(12, 239);
                label2.Name = "label2";
                label2.Size = new Size(112, 20);
                label2.TabIndex = 4;
@@ -81,49 +85,49 @@
                // label3
                // 
                label3.AutoSize = true;
-               label3.Location = new Point(11, 263);
+               label3.Location = new Point(25, 334);
                label3.Name = "label3";
                label3.Size = new Size(99, 20);
                label3.TabIndex = 5;
                label3.Text = "Collaborators";
                // 
-               // responseTextBoxLabel
+               // responseTextBox
                // 
-               responseTextBoxLabel.Location = new Point(117, 161);
-               responseTextBoxLabel.Multiline = true;
-               responseTextBoxLabel.Name = "responseTextBoxLabel";
-               responseTextBoxLabel.Size = new Size(305, 58);
-               responseTextBoxLabel.TabIndex = 6;
+               responseTextBox.Location = new Point(130, 221);
+               responseTextBox.Multiline = true;
+               responseTextBox.Name = "responseTextBox";
+               responseTextBox.Size = new Size(305, 58);
+               responseTextBox.TabIndex = 6;
                // 
-               // collabTextBoxLabel
+               // collabTextBox
                // 
-               collabTextBoxLabel.Location = new Point(117, 242);
-               collabTextBoxLabel.Multiline = true;
-               collabTextBoxLabel.Name = "collabTextBoxLabel";
-               collabTextBoxLabel.Size = new Size(305, 57);
-               collabTextBoxLabel.TabIndex = 14;
+               collabTextBox.Location = new Point(130, 316);
+               collabTextBox.Multiline = true;
+               collabTextBox.Name = "collabTextBox";
+               collabTextBox.Size = new Size(305, 57);
+               collabTextBox.TabIndex = 14;
                // 
-               // descriptionTextBoxLabel
+               // descriptionTextBox
                // 
-               descriptionTextBoxLabel.Location = new Point(117, 68);
-               descriptionTextBoxLabel.Multiline = true;
-               descriptionTextBoxLabel.Name = "descriptionTextBoxLabel";
-               descriptionTextBoxLabel.Size = new Size(305, 64);
-               descriptionTextBoxLabel.TabIndex = 16;
+               descriptionTextBox.Location = new Point(130, 136);
+               descriptionTextBox.Multiline = true;
+               descriptionTextBox.Name = "descriptionTextBox";
+               descriptionTextBox.Size = new Size(305, 60);
+               descriptionTextBox.TabIndex = 16;
                // 
-               // newCardButton
+               // clearFormButton
                // 
-               newCardButton.Location = new Point(54, 467);
-               newCardButton.Name = "newCardButton";
-               newCardButton.Size = new Size(144, 49);
-               newCardButton.TabIndex = 17;
-               newCardButton.Text = "New Card";
-               newCardButton.UseVisualStyleBackColor = true;
-               newCardButton.Click += newCardButton_Click;
+               clearFormButton.Location = new Point(777, 467);
+               clearFormButton.Name = "clearFormButton";
+               clearFormButton.Size = new Size(144, 49);
+               clearFormButton.TabIndex = 17;
+               clearFormButton.Text = "Clear Form";
+               clearFormButton.UseVisualStyleBackColor = true;
+               clearFormButton.Click += newCardButton_Click;
                // 
                // saveCardButton
                // 
-               saveCardButton.Location = new Point(239, 467);
+               saveCardButton.Location = new Point(69, 467);
                saveCardButton.Name = "saveCardButton";
                saveCardButton.Size = new Size(144, 49);
                saveCardButton.TabIndex = 18;
@@ -133,7 +137,7 @@
                // 
                // loadCardButton
                // 
-               loadCardButton.Location = new Point(427, 467);
+               loadCardButton.Location = new Point(291, 467);
                loadCardButton.Name = "loadCardButton";
                loadCardButton.Size = new Size(144, 49);
                loadCardButton.TabIndex = 19;
@@ -143,12 +147,13 @@
                // 
                // deleteCardButton
                // 
-               deleteCardButton.Location = new Point(617, 467);
+               deleteCardButton.Location = new Point(555, 467);
                deleteCardButton.Name = "deleteCardButton";
                deleteCardButton.Size = new Size(144, 49);
                deleteCardButton.TabIndex = 20;
                deleteCardButton.Text = "Delete Card";
                deleteCardButton.UseVisualStyleBackColor = true;
+               deleteCardButton.Click += deleteCardButton_Click;
                // 
                // dataGridViewCards
                // 
@@ -157,7 +162,7 @@
                dataGridViewCards.AllowUserToResizeColumns = false;
                dataGridViewCards.AllowUserToResizeRows = false;
                dataGridViewCards.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-               dataGridViewCards.Location = new Point(494, 12);
+               dataGridViewCards.Location = new Point(498, 86);
                dataGridViewCards.Name = "dataGridViewCards";
                dataGridViewCards.ReadOnly = true;
                dataGridViewCards.RowHeadersVisible = false;
@@ -166,46 +171,79 @@
                dataGridViewCards.Size = new Size(458, 287);
                dataGridViewCards.TabIndex = 21;
                // 
+               // menuStrip1
+               // 
+               menuStrip1.BackColor = Color.Gainsboro;
+               menuStrip1.ImageScalingSize = new Size(20, 20);
+               menuStrip1.Items.AddRange(new ToolStripItem[] { userToolStripMenuItem });
+               menuStrip1.Location = new Point(0, 0);
+               menuStrip1.Name = "menuStrip1";
+               menuStrip1.Size = new Size(977, 28);
+               menuStrip1.TabIndex = 22;
+               menuStrip1.Text = "menuStrip1";
+               // 
+               // userToolStripMenuItem
+               // 
+               userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
+               userToolStripMenuItem.Name = "userToolStripMenuItem";
+               userToolStripMenuItem.Size = new Size(52, 24);
+               userToolStripMenuItem.Text = "User";
+               // 
+               // helpToolStripMenuItem
+               // 
+               helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+               helpToolStripMenuItem.Size = new Size(124, 26);
+               helpToolStripMenuItem.Text = "Help";
+               helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
+               // 
                // CrcFormLabel
                // 
                AutoScaleDimensions = new SizeF(8F, 20F);
                AutoScaleMode = AutoScaleMode.Font;
+               BackColor = Color.WhiteSmoke;
                ClientSize = new Size(977, 543);
                Controls.Add(dataGridViewCards);
                Controls.Add(deleteCardButton);
                Controls.Add(loadCardButton);
                Controls.Add(saveCardButton);
-               Controls.Add(newCardButton);
-               Controls.Add(descriptionTextBoxLabel);
-               Controls.Add(collabTextBoxLabel);
-               Controls.Add(responseTextBoxLabel);
+               Controls.Add(clearFormButton);
+               Controls.Add(descriptionTextBox);
+               Controls.Add(collabTextBox);
+               Controls.Add(responseTextBox);
                Controls.Add(label3);
                Controls.Add(label2);
                Controls.Add(label1);
                Controls.Add(classNameLabel);
-               Controls.Add(classTextBoxLabel);
+               Controls.Add(classTextBox);
+               Controls.Add(menuStrip1);
+               MainMenuStrip = menuStrip1;
                Name = "CrcFormLabel";
                Text = "CRC Card Application";
                Load += Form1_Load;
                ((System.ComponentModel.ISupportInitialize)dataGridViewCards).EndInit();
+               menuStrip1.ResumeLayout(false);
+               menuStrip1.PerformLayout();
                ResumeLayout(false);
                PerformLayout();
           }
 
           #endregion
 
-          private TextBox classTextBoxLabel;
+          private TextBox classTextBox;
           private Label classNameLabel;
           private Label label1;
           private Label label2;
           private Label label3;
-          private TextBox responseTextBoxLabel;
-          private TextBox collabTextBoxLabel;
-          private TextBox descriptionTextBoxLabel;
-          private Button newCardButton;
+          private TextBox responseTextBox;
+          private TextBox collabTextBox;
+          private TextBox descriptionTextBox;
+          private Button clearFormButton;
           private Button saveCardButton;
           private Button loadCardButton;
           private Button deleteCardButton;
           private DataGridView dataGridViewCards;
+          private MenuStrip menuStrip1;
+          private ToolStripMenuItem userToolStripMenuItem;
+          private ToolStripMenuItem helpToolStripMenuItem;
      }
 }

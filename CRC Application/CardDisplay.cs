@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CRC_Application
 {
-     public partial class Form2 : Form
+     public partial class CardDisplay : Form
      {
           public string className { get; set; }
           public string description { get; set; }
           public string responsibilities { get; set; }
           public string collaborators { get; set; }
 
-          public Form2()
+          public CardDisplay()
           {
                InitializeComponent();
           }
