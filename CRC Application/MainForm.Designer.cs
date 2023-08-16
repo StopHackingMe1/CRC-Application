@@ -44,13 +44,14 @@
                menuStrip1 = new MenuStrip();
                userToolStripMenuItem = new ToolStripMenuItem();
                helpToolStripMenuItem = new ToolStripMenuItem();
+               saveToolStripMenuItem = new ToolStripMenuItem();
                ((System.ComponentModel.ISupportInitialize)dataGridViewCards).BeginInit();
                menuStrip1.SuspendLayout();
                SuspendLayout();
                // 
                // classTextBox
                // 
-               classTextBox.Location = new Point(130, 83);
+               classTextBox.Location = new Point(12, 83);
                classTextBox.Name = "classTextBox";
                classTextBox.Size = new Size(305, 27);
                classTextBox.TabIndex = 0;
@@ -58,7 +59,8 @@
                // classNameLabel
                // 
                classNameLabel.AutoSize = true;
-               classNameLabel.Location = new Point(24, 86);
+               classNameLabel.BackColor = Color.Gainsboro;
+               classNameLabel.Location = new Point(12, 60);
                classNameLabel.Name = "classNameLabel";
                classNameLabel.Size = new Size(86, 20);
                classNameLabel.TabIndex = 1;
@@ -67,7 +69,8 @@
                // label1
                // 
                label1.AutoSize = true;
-               label1.Location = new Point(25, 150);
+               label1.BackColor = Color.Gainsboro;
+               label1.Location = new Point(13, 134);
                label1.Name = "label1";
                label1.Size = new Size(85, 20);
                label1.TabIndex = 2;
@@ -76,7 +79,8 @@
                // label2
                // 
                label2.AutoSize = true;
-               label2.Location = new Point(12, 239);
+               label2.BackColor = Color.Gainsboro;
+               label2.Location = new Point(13, 239);
                label2.Name = "label2";
                label2.Size = new Size(112, 20);
                label2.TabIndex = 4;
@@ -85,7 +89,8 @@
                // label3
                // 
                label3.AutoSize = true;
-               label3.Location = new Point(25, 334);
+               label3.BackColor = Color.Gainsboro;
+               label3.Location = new Point(13, 344);
                label3.Name = "label3";
                label3.Size = new Size(99, 20);
                label3.TabIndex = 5;
@@ -93,7 +98,8 @@
                // 
                // responseTextBox
                // 
-               responseTextBox.Location = new Point(130, 221);
+               responseTextBox.BackColor = SystemColors.Window;
+               responseTextBox.Location = new Point(13, 262);
                responseTextBox.Multiline = true;
                responseTextBox.Name = "responseTextBox";
                responseTextBox.Size = new Size(305, 58);
@@ -101,7 +107,8 @@
                // 
                // collabTextBox
                // 
-               collabTextBox.Location = new Point(130, 316);
+               collabTextBox.BackColor = SystemColors.HighlightText;
+               collabTextBox.Location = new Point(12, 367);
                collabTextBox.Multiline = true;
                collabTextBox.Name = "collabTextBox";
                collabTextBox.Size = new Size(305, 57);
@@ -109,7 +116,7 @@
                // 
                // descriptionTextBox
                // 
-               descriptionTextBox.Location = new Point(130, 136);
+               descriptionTextBox.Location = new Point(12, 157);
                descriptionTextBox.Multiline = true;
                descriptionTextBox.Name = "descriptionTextBox";
                descriptionTextBox.Size = new Size(305, 60);
@@ -117,7 +124,7 @@
                // 
                // clearFormButton
                // 
-               clearFormButton.Location = new Point(777, 467);
+               clearFormButton.Location = new Point(585, 467);
                clearFormButton.Name = "clearFormButton";
                clearFormButton.Size = new Size(144, 49);
                clearFormButton.TabIndex = 17;
@@ -127,32 +134,35 @@
                // 
                // saveCardButton
                // 
-               saveCardButton.Location = new Point(69, 467);
+               saveCardButton.BackColor = Color.OliveDrab;
+               saveCardButton.Location = new Point(13, 467);
                saveCardButton.Name = "saveCardButton";
                saveCardButton.Size = new Size(144, 49);
                saveCardButton.TabIndex = 18;
                saveCardButton.Text = "Save Card";
-               saveCardButton.UseVisualStyleBackColor = true;
+               saveCardButton.UseVisualStyleBackColor = false;
                saveCardButton.Click += saveCardButton_Click;
                // 
                // loadCardButton
                // 
-               loadCardButton.Location = new Point(291, 467);
+               loadCardButton.BackColor = Color.SandyBrown;
+               loadCardButton.Location = new Point(215, 467);
                loadCardButton.Name = "loadCardButton";
                loadCardButton.Size = new Size(144, 49);
                loadCardButton.TabIndex = 19;
                loadCardButton.Text = "Read Card";
-               loadCardButton.UseVisualStyleBackColor = true;
+               loadCardButton.UseVisualStyleBackColor = false;
                loadCardButton.Click += loadCardButton_Click;
                // 
                // deleteCardButton
                // 
-               deleteCardButton.Location = new Point(555, 467);
+               deleteCardButton.BackColor = Color.IndianRed;
+               deleteCardButton.Location = new Point(405, 467);
                deleteCardButton.Name = "deleteCardButton";
                deleteCardButton.Size = new Size(144, 49);
                deleteCardButton.TabIndex = 20;
                deleteCardButton.Text = "Delete Card";
-               deleteCardButton.UseVisualStyleBackColor = true;
+               deleteCardButton.UseVisualStyleBackColor = false;
                deleteCardButton.Click += deleteCardButton_Click;
                // 
                // dataGridViewCards
@@ -184,7 +194,7 @@
                // 
                // userToolStripMenuItem
                // 
-               userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { helpToolStripMenuItem });
+               userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { helpToolStripMenuItem, saveToolStripMenuItem });
                userToolStripMenuItem.Name = "userToolStripMenuItem";
                userToolStripMenuItem.Size = new Size(52, 24);
                userToolStripMenuItem.Text = "User";
@@ -192,9 +202,16 @@
                // helpToolStripMenuItem
                // 
                helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-               helpToolStripMenuItem.Size = new Size(124, 26);
+               helpToolStripMenuItem.Size = new Size(224, 26);
                helpToolStripMenuItem.Text = "Help";
                helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
+               // 
+               // saveToolStripMenuItem
+               // 
+               saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+               saveToolStripMenuItem.Size = new Size(224, 26);
+               saveToolStripMenuItem.Text = "Save All Cards";
+               saveToolStripMenuItem.Click += saveAllToolStripMenuItem_Click;
                // 
                // CrcFormLabel
                // 
@@ -245,5 +262,6 @@
           private MenuStrip menuStrip1;
           private ToolStripMenuItem userToolStripMenuItem;
           private ToolStripMenuItem helpToolStripMenuItem;
+          private ToolStripMenuItem saveToolStripMenuItem;
      }
 }
